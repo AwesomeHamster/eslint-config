@@ -1,11 +1,15 @@
+/** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  extends: ['./index.eslintrc.js'],
+  extends: ['./index.eslintrc.js', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/parsers': {
       '@typescript-eslint/parser': [
         '.ts',
       ],
+    },
+    'import/resolver': {
+      typescript: true,
     },
   },
   plugins: [

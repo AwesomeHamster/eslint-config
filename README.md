@@ -2,31 +2,44 @@
 
 Common ESLint configuration used in Hamster
 
-
 ## Install
 
 ```bash
 npm i --save-dev eslint @hamster-bot/eslint-config
-# Or
+# Or use yarn
 yarn add --dev eslint @hamster-bot/eslint-config
 ```
 
-If you are using TypeScript as well, you need to install typescript-eslint plugin.
+------
+
+If you are using TypeScript as well, you need to install `typescript-eslint` plugin and `eslint-import-resolver-typescript`.
 
 ```bash
-npm i --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
-# Or
-yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser
+npm i --save-dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript
+# Or use yarn
+yarn add --dev @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-typescript
 ```
 
 ## Usage
 
-Create an `.eslintrc.json` file and append the following:
+Create an eslint configuration file like `.eslintrc.json` and append the following:
 
 ```json
 {
   "extends": [
-    "@hamster-bot" // or "@hamster-bot/eslint-config/typescript" for TypeScript users
+    "@hamster-bot"
+  ]
+}
+```
+
+------
+
+TypeScript user should use `@hamster-bot/eslint-config/typescript`:
+
+```json
+{
+  "extends": [
+    "@hamster-bot/eslint-config/typescript"
   ]
 }
 ```
