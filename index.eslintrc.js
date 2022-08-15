@@ -1,3 +1,4 @@
+/** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
   root: true,
   env: {
@@ -11,7 +12,13 @@ module.exports = {
   },
   extends: [
     'standard',
+    'plugin:import/recommended',
   ],
+  settings: {
+    'import/resolver': {
+      node: true,
+    },
+  },
   plugins: [
     'mocha',
   ],
@@ -65,5 +72,12 @@ module.exports = {
       'after',
     ],
     'import/export': 'off',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        'alphabetize': { order: 'asc' },
+      },
+    ],
   },
 }
