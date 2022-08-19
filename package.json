@@ -1,6 +1,6 @@
 {
   "name": "@hamster-bot/eslint-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common ESLint configuration used in Hamster",
   "main": "index.eslintrc.js",
   "exports": {
