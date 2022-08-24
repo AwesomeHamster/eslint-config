@@ -10,32 +10,18 @@ module.exports = {
   globals: {
     NodeJS: true,
   },
-  extends: [
-    'standard',
-    'plugin:import/recommended',
-  ],
+  extends: ['standard', 'plugin:import/recommended'],
   settings: {
     'import/resolver': {
       node: true,
     },
   },
-  plugins: [
-    'mocha',
-  ],
+  plugins: ['mocha'],
   rules: {
-    'comma-dangle': [
-      'error',
-      'always-multiline',
-    ],
+    'comma-dangle': ['error', 'always-multiline'],
     'dot-notation': 'off',
-    'generator-star-spacing': [
-      'error',
-      'after',
-    ],
-    'max-len': [
-      'warn',
-      120,
-    ],
+    'generator-star-spacing': ['error', 'after'],
+    'max-len': ['warn', 120],
     'multiline-ternary': 'off',
     'no-callback-literal': 'off',
     'no-mixed-operators': 'off',
@@ -62,15 +48,9 @@ module.exports = {
         allowTemplateLiterals: true,
       },
     ],
-    'quote-props': [
-      'error',
-      'consistent-as-needed',
-    ],
+    'quote-props': ['error', 'consistent-as-needed'],
     'valid-typeof': 'off',
-    'yield-star-spacing': [
-      'error',
-      'after',
-    ],
+    'yield-star-spacing': ['error', 'after'],
     'import/export': 'off',
     'import/order': [
       'error',

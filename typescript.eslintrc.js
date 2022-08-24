@@ -1,20 +1,16 @@
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  extends: ['./index.eslintrc.js', 'plugin:import/typescript'],
+  extends: ['./index.eslintrc.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': [
-        '.ts',
-      ],
+      '@typescript-eslint/parser': ['.ts'],
     },
     'import/resolver': {
       typescript: true,
     },
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
     '@typescript-eslint/array-type': 'error',
     'default-param-last': 'off',
@@ -37,10 +33,7 @@ module.exports = {
     'no-useless-constructor': 'off',
     '@typescript-eslint/no-useless-constructor': 'warn',
     'semi': 'off',
-    '@typescript-eslint/semi': [
-      'error',
-      'never',
-    ],
+    '@typescript-eslint/semi': ['error', 'never'],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
