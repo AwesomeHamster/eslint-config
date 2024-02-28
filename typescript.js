@@ -1,10 +1,12 @@
+'use strict'
+
 /** @type {import('eslint').ESLint.ConfigData} */
 module.exports = {
-  extends: ['./index.eslintrc.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
+  extends: ['./index.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts'],
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
     },
     'import/resolver': {
       typescript: true,
