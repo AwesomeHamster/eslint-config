@@ -15,6 +15,7 @@ module.exports = {
   rules: {
     'n/global-require': 'error',
     'n/no-new-require': 'error',
+    'n/no-unpublished-import': 'off',
     'n/no-unsupported-features/node-builtins': 'off',
     'n/no-process-exit': 'off',
     'n/prefer-global/buffer': 'error',
