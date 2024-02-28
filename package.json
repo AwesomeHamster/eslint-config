@@ -5,6 +5,11 @@
   "repository": "https://github.com/MaikoTan/eslint-config.git",
   "author": "Maiko Tan",
   "license": "CC-BY-NC-4.0",
+  "files": [
+    "index.js",
+    "node.js",
+    "typescript.js"
+  ],
   "prettier": "@hamster-bot/prettier-config",
   "eslintConfig": {
     "extends": [
