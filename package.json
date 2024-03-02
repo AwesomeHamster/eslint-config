@@ -2,14 +2,22 @@
   "name": "@hamster-bot/eslint-config",
   "version": "1.0.5",
   "description": "Common ESLint configuration used in Hamster",
-  "repository": "https://github.com/MaikoTan/eslint-config.git",
-  "author": "Maiko Tan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaikoTan/eslint-config.git"
+  },
+  "author": {
+    "name": "Maiko Tan",
+    "url": "https://github.com/MaikoTan",
+    "email": "maiko.tan.coding@gmail.com"
+  },
   "license": "CC-BY-NC-4.0",
   "files": [
     "index.js",
     "node.js",
     "typescript.js"
   ],
+  "scripts": {},
   "prettier": "@hamster-bot/prettier-config",
   "eslintConfig": {
     "extends": [
