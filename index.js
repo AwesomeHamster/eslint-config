@@ -43,6 +43,7 @@ module.exports = {
     'quote-props': ['error', 'consistent-as-needed'],
     'valid-typeof': 'off',
     'yield-star-spacing': ['error', 'after'],
+    'space-before-function-paren': 'off',
     // Import plugin
     'import/export': 'off',
     'import/no-unresolved': 'error',
