@@ -97,5 +97,6 @@
     "eslint-plugin-n": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
