@@ -12,16 +12,29 @@
     "email": "maiko.tan.coding@gmail.com"
   },
   "license": "CC-BY-NC-4.0",
+  "type": "commonjs",
   "files": [
-    "index.js",
-    "node.js",
-    "typescript.js"
+    "dist"
   ],
-  "scripts": {},
+  "exports": {
+    ".": {
+      "require": "./dist/index.js"
+    },
+    "./node": {
+      "require": "./dist/node.js"
+    },
+    "./typescript": {
+      "require": "./dist/typescript.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
   "prettier": "@hamster-bot/prettier-config",
   "eslintConfig": {
     "extends": [
-      "./index.js"
+      "./dist/index.js"
     ]
   },
   "dependencies": {
@@ -29,6 +42,7 @@
   },
   "devDependencies": {
     "@hamster-bot/prettier-config": "*",
+    "@types/eslint": "^8.56.10",
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "eslint": "^8.57.0",

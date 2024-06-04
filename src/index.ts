@@ -1,7 +1,6 @@
-'use strict'
+import { Linter } from 'eslint'
 
-/** @type {import('eslint').Linter.Config} */
-module.exports = {
+export = {
   extends: ['standard', 'plugin:import/recommended'],
   settings: {
     'import/resolver': {
@@ -59,4 +58,4 @@ module.exports = {
       },
     ],
   },
-}
+} satisfies Linter.Config
