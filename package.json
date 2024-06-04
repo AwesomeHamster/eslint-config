@@ -41,7 +41,8 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript"
+    "build": "rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "prepublishOnly": "yarn build"
   },
   "prettier": "@hamster-bot/prettier-config",
   "eslintConfig": {
