@@ -1,6 +1,6 @@
 import { Linter } from 'eslint'
 
-export = {
+export default {
   extends: ['./index.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
@@ -57,4 +57,4 @@ export = {
     ],
     '@typescript-eslint/type-annotation-spacing': 'error',
   },
-} satisfies Linter.Config
+} satisfies Linter.Config as Linter.Config

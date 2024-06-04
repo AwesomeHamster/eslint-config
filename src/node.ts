@@ -1,6 +1,6 @@
 import { Linter } from 'eslint'
 
-export = {
+export default {
   extends: ['./index.js', 'plugin:n/recommended'],
   env: {
     node: true,
@@ -23,4 +23,4 @@ export = {
     'n/prefer-global/url-search-params': 'error',
     'n/prefer-global/url': 'error',
   },
-} satisfies Linter.Config
+} satisfies Linter.Config as Linter.Config

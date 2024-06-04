@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "CommonJS",
+    "target": "ESNext",
+    "module": "ESNext",
     "rootDir": "./src",
     "outDir": "./dist",
     "declaration": true,
-  }
+    "esModuleInterop": true,
+    "moduleResolution": "Bundler"
+  },
+  "references": [{ "path": "./tsconfig.node.json" }],
 }
