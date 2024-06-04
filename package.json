@@ -24,6 +24,13 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./index": {
+      "types": {
+        "import": "./dist/index.d.ts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
     "./node": {
       "types": {
         "import": "./dist/node.d.ts"
