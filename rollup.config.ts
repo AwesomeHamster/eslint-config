@@ -4,11 +4,7 @@ import nodeResolve from '@rollup/plugin-node-resolve'
 import { defineConfig } from 'rollup'
 
 export default defineConfig({
-  input: [
-    'src/index.ts',
-    'src/node.ts',
-    'src/typescript.ts',
-  ],
+  input: ['src/index.ts', 'src/node.ts', 'src/typescript.ts'],
   output: [
     {
       dir: 'dist',
@@ -25,5 +21,15 @@ export default defineConfig({
       },
     },
   ],
+  external: [
+    '@eslint/eslintrc',
+    'eslint',
+    'eslint-plugin-import',
+    'eslint-plugin-mocha',
+    'eslint-config-standard',
+    'globals',
+    'typescript-eslint',
+  ],
+  treeshake: true,
   plugins: [nodeResolve(), commonjs(), typescript()],
 })
