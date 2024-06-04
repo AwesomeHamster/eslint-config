@@ -1,6 +1,6 @@
 import { Linter } from 'eslint'
 
-export = {
+export default {
   extends: ['standard', 'plugin:import/recommended'],
   settings: {
     'import/resolver': {
@@ -58,4 +58,4 @@ export = {
       },
     ],
   },
-} satisfies Linter.Config
+} satisfies Linter.Config as Linter.Config
