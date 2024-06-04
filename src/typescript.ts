@@ -1,7 +1,6 @@
-'use strict'
+import { Linter } from 'eslint'
 
-/** @type {import('eslint').ESLint.ConfigData} */
-module.exports = {
+export = {
   extends: ['./index.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
@@ -58,4 +57,4 @@ module.exports = {
     ],
     '@typescript-eslint/type-annotation-spacing': 'error',
   },
-}
+} satisfies Linter.Config
