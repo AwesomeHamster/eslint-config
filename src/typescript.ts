@@ -1,7 +1,7 @@
 import { Linter } from 'eslint'
 
 export default {
-  extends: ['./index.js', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
+  extends: ['@hamster-bot/eslint-config', 'plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
   parser: '@typescript-eslint/parser',
   settings: {
     'import/parsers': {

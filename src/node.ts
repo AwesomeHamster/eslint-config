@@ -1,7 +1,7 @@
 import { Linter } from 'eslint'
 
 export default {
-  extends: ['./index.js', 'plugin:n/recommended'],
+  extends: ['@hamster-bot/eslint-config', 'plugin:n/recommended'],
   env: {
     node: true,
   },
