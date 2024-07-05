@@ -1,6 +1,6 @@
 {
   "name": "@hamster-bot/eslint-config",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "Common ESLint configuration used in Hamster",
   "repository": {
     "type": "git",
@@ -18,6 +18,13 @@
   ],
   "exports": {
     ".": {
+      "types": {
+        "import": "./dist/index.d.ts"
+      },
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./index": {
       "types": {
         "import": "./dist/index.d.ts"
       },
@@ -99,5 +106,6 @@
     "eslint-plugin-n": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
