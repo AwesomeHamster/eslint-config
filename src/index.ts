@@ -5,12 +5,14 @@ import { Linter } from 'eslint'
 const compat = new FlatCompat()
 
 const config: Linter.FlatConfig[] = [
-  ...compat.extends('standard'),
-  ...compat.extends('plugin:import/recommended'),
+  ...compat.extends('plugin:import-x/recommended'),
   mochaPlugin.configs.flat.recommended,
   {
+    languageOptions: {
+      ecmaVersion: 2024,
+    },
     settings: {
-      'import/resolver': {
+      'import-x/resolver': {
         node: true,
       },
     },
@@ -50,9 +52,9 @@ const config: Linter.FlatConfig[] = [
       'yield-star-spacing': ['error', 'after'],
       'space-before-function-paren': 'off',
       // Import plugin
-      'import/export': 'off',
-      'import/no-unresolved': 'error',
-      'import/order': [
+      'import-x/export': 'off',
+      'import-x/no-unresolved': 'error',
+      'import-x/order': [
         'error',
         {
           'groups': ['builtin', 'external', 'internal', 'unknown', 'parent', 'sibling', 'index', 'object', 'type'],

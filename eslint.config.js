@@ -1,3 +1,8 @@
-import configs from './dist/index.js'
+import configs from './dist/typescript.js'
 
-export default configs
+export default [
+  ...configs,
+  {
+    ignores: ['dist/**/*'],
+  },
+]

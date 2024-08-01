@@ -5,27 +5,19 @@ import tseslint from 'typescript-eslint'
 import baseConfig from './index'
 
 const compat = new FlatCompat()
-const config: Linter.FlatConfig[] = [
+const config = [
   ...baseConfig,
-  ...(tseslint.configs.recommendedTypeChecked as Linter.FlatConfig[]),
+  ...tseslint.configs.recommended,
   {
     languageOptions: {
       parserOptions: {
-        project: true,
-        tsconfigRootDir: import.meta.dirname,
+        parser: '@typescript-eslint/parser',
+        projectService: true,
       },
     },
   },
-  ...compat.extends('plugin:import/typescript'),
+  ...compat.extends('plugin:import-x/typescript'),
   {
-    settings: {
-      'import/parsers': {
-        '@typescript-eslint/parser': ['.ts', '.tsx'],
-      },
-      'import/resolver': {
-        typescript: true,
-      },
-    },
     rules: {
       '@typescript-eslint/array-type': 'error',
       'default-param-last': 'off',
@@ -72,6 +64,6 @@ const config: Linter.FlatConfig[] = [
       '@typescript-eslint/type-annotation-spacing': 'error',
     },
   },
-]
+] as Linter.FlatConfig[]
 
 export default config
