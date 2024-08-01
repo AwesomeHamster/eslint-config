@@ -1,10 +1,12 @@
 import { FlatCompat } from '@eslint/eslintrc'
+import js from '@eslint/js'
 import { Linter } from 'eslint'
 import mochaPlugin from 'eslint-plugin-mocha'
 
 const compat = new FlatCompat()
 
 const config: Linter.FlatConfig[] = [
+  js.configs.recommended,
   ...compat.extends('plugin:import-x/recommended'),
   mochaPlugin.configs.flat.recommended,
   {
