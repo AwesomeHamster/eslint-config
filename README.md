@@ -10,16 +10,6 @@ npm i --save-dev eslint @hamster-bot/eslint-config
 yarn add --dev eslint @hamster-bot/eslint-config
 ```
 
-------
-
-If you are using TypeScript as well, you need to install `typescript-eslint` plugin and `eslint-import-resolver-typescript`.
-
-```bash
-npm i --save-dev typescript-eslint eslint-import-resolver-typescript
-# Or use yarn
-yarn add --dev typescript-eslint eslint-import-resolver-typescript
-```
-
 ## Usage
 
 This package provides flat config introduced in ESLint v9.
