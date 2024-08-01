@@ -1,6 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc'
-import mochaPlugin from 'eslint-plugin-mocha'
 import { Linter } from 'eslint'
+import mochaPlugin from 'eslint-plugin-mocha'
 
 const compat = new FlatCompat()
 

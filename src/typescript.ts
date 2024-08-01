@@ -1,22 +1,28 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import { Linter } from 'eslint'
-import tseslint from 'typescript-eslint'
+import { configs as tseslint } from 'typescript-eslint'
 
 import baseConfig from './index'
 
 const compat = new FlatCompat()
 const config = [
   ...baseConfig,
-  ...tseslint.configs.recommended,
+  ...tseslint.recommended,
   {
     languageOptions: {
       parserOptions: {
-        parser: '@typescript-eslint/parser',
         projectService: true,
       },
     },
   },
   ...compat.extends('plugin:import-x/typescript'),
+  {
+    settings: {
+      'import-x/resolver': {
+        typescript: true,
+      },
+    },
+  },
   {
     rules: {
       '@typescript-eslint/array-type': 'error',
