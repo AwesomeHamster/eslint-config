@@ -10,7 +10,6 @@ const config: Linter.FlatConfig[] = [
   ...compat.extends('plugin:n/recommended'),
   {
     languageOptions: {
-      ecmaVersion: 2024,
       globals: globals.node,
     },
     rules: {
