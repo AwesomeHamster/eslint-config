@@ -14,12 +14,28 @@ yarn add --dev eslint @hamster-bot/eslint-config
 
 This package provides flat config introduced in ESLint v9.
 
-Create an eslint configuration file like `eslint.config.js` and append the following:
+Create an eslint configuration file like `eslint.config.mjs` and append the following:
 
-```js
-const hamster = require('@hamster-bot/eslint-config')
+```js file=eslint.config.mjs
+import hamster from '@hamster-bot/eslint-config'
 
-module.exports = [
+export default [
+  hamster,
+  // Add more configurations here
+]
+```
+
+> You can also use `require()` and `module.export` if you are using CommonJS.
+> In that case, you should use `.cjs` extension or just `.js` for the configuration file.
+
+------
+
+TypeScript user should use `@hamster-bot/eslint-config/typescript`:
+
+```js file=eslint.config.mjs
+import hamster from '@hamster-bot/eslint-config/typescript'
+
+export default [
   hamster,
   // Add more configurations here
 ]
@@ -27,12 +43,12 @@ module.exports = [
 
 ------
 
-TypeScript user should use `@hamster-bot/eslint-config/typescript`:
+We also provide a configuration for Node scripts:
 
-```js
-const hamster = require('@hamster-bot/eslint-config/typescript')
+```js file=eslint.config.mjs
+import hamster from '@hamster-bot/eslint-config/node'
 
-module.exports = [
+export default [
   hamster,
   // Add more configurations here
 ]
