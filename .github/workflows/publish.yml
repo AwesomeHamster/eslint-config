@@ -31,7 +31,15 @@ jobs:
           yarn build
 
       - name: Publish to NPM
+        id: npm-publish
         uses: JS-DevTools/npm-publish@v3
         with:
           token: ${{ secrets.NPM_TOKEN }}
           access: public
+
+      - name: Create Tag
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.npm-publish.outputs.version }}
+          generate_release_notes: true
+          make_latest: true
