@@ -1,6 +1,6 @@
 {
   "name": "@hamster-bot/eslint-config",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Common ESLint configuration used in Hamster",
   "repository": {
     "type": "git",
