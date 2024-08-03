@@ -24,27 +24,6 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./index": {
-      "types": {
-        "import": "./dist/index.d.ts"
-      },
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    },
-    "./node": {
-      "types": {
-        "import": "./dist/node.d.ts"
-      },
-      "import": "./dist/node.js",
-      "require": "./dist/node.cjs"
-    },
-    "./typescript": {
-      "types": {
-        "import": "./dist/typescript.d.ts"
-      },
-      "import": "./dist/typescript.js",
-      "require": "./dist/typescript.cjs"
-    },
     "./package.json": "./package.json"
   },
   "scripts": {

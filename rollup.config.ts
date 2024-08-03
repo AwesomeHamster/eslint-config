@@ -4,7 +4,7 @@ import typescript from '@rollup/plugin-typescript'
 import { defineConfig } from 'rollup'
 
 export default defineConfig({
-  input: ['src/index.ts', 'src/node.ts', 'src/typescript.ts'],
+  input: ['src/index.ts'],
   output: [
     {
       dir: 'dist',
@@ -23,6 +23,7 @@ export default defineConfig({
   ],
   external: [
     '@eslint/eslintrc',
+    '@eslint/js',
     'eslint',
     'eslint-plugin-import',
     'eslint-plugin-mocha',

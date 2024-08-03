@@ -2,7 +2,7 @@ import { FlatCompat } from '@eslint/eslintrc'
 import { Linter } from 'eslint'
 import globals from 'globals'
 
-import baseConfig from './index'
+import baseConfig from './base'
 
 const compat = new FlatCompat()
 const config: Linter.FlatConfig[] = [
