@@ -1,13 +1,12 @@
-import { FlatCompat } from '@eslint/eslintrc'
 import { Linter } from 'eslint'
+import nodePlugin from 'eslint-plugin-n'
 import globals from 'globals'
 
 import baseConfig from './base'
 
-const compat = new FlatCompat()
 const config: Linter.FlatConfig[] = [
   ...baseConfig,
-  ...compat.extends('plugin:n/recommended'),
+  nodePlugin.configs['flat/recommended'],
   {
     languageOptions: {
       globals: globals.node,
