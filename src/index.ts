@@ -14,6 +14,7 @@ const config: Linter.FlatConfig[] = [
       '**/.git/**',
       '**/.yarn/**',
       '**/node_modules/**',
+      '**/.pnp.*',
     ],
   },
   {
