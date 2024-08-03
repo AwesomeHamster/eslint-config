@@ -17,10 +17,10 @@ This package provides flat config introduced in ESLint v9.
 Create an eslint configuration file like `eslint.config.mjs` and append the following:
 
 ```js file=eslint.config.mjs
-import hamster from '@hamster-bot/eslint-config'
+import * as hamster from '@hamster-bot/eslint-config'
 
 export default [
-  hamster,
+  ...hamster.configs.base,
   // Add more configurations here
 ]
 ```
@@ -30,13 +30,13 @@ export default [
 
 ------
 
-TypeScript user should use `@hamster-bot/eslint-config/typescript`:
+TypeScript user should use `hamster.configs.typescript`:
 
 ```js file=eslint.config.mjs
-import hamster from '@hamster-bot/eslint-config/typescript'
+import * as hamster from '@hamster-bot/eslint-config'
 
 export default [
-  hamster,
+  ...hamster.configs.typescript,
   // Add more configurations here
 ]
 ```
@@ -46,13 +46,18 @@ export default [
 We also provide a configuration for Node scripts:
 
 ```js file=eslint.config.mjs
-import hamster from '@hamster-bot/eslint-config/node'
+import * as hamster from '@hamster-bot/eslint-config'
 
 export default [
-  hamster,
+  ...hamster.configs.node,
   // Add more configurations here
 ]
 ```
+
+> [!NOTE]
+> If you are using Yarn PnP, since the `import-x` plugin that we are using if not
+> actually support PnP, it is supported by the `eslint`'s FlatCompat plugin right now.
+> So it require you to manually declare this plugin as the dependencies in your `package.json`.
 
 ## License
 
