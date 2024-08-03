@@ -10,6 +10,13 @@ const config: Linter.FlatConfig[] = [
   ...compat.extends('plugin:import-x/recommended'),
   mochaPlugin.configs.flat.recommended,
   {
+    ignores: [
+      '**/.git/**',
+      '**/.yarn/**',
+      '**/node_modules/**',
+    ],
+  },
+  {
     languageOptions: {
       ecmaVersion: 2024,
     },
