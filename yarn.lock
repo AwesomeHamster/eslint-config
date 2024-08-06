@@ -107,7 +107,7 @@ __metadata:
     typescript: "npm:^5.5.3"
     typescript-eslint: "npm:^7.15.0"
   peerDependencies:
-    eslint: ">=9"
+    eslint: ^8.34.0 || >=9.0.0
     eslint-plugin-mocha: ^10.3.0
   peerDependenciesMeta:
     eslint-plugin-mocha:
