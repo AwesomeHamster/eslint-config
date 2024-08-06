@@ -3,11 +3,13 @@ import js from '@eslint/js'
 import { Linter } from 'eslint'
 import mochaPlugin from 'eslint-plugin-mocha'
 
+import stylistic from './stylistic'
+
 const compat = new FlatCompat()
 
-const config: Linter.FlatConfig[] = [
+const config: Linter.Config[] = [
   js.configs.recommended,
-  ...compat.extends('plugin:import-x/recommended'),
+  ...(compat.extends('plugin:import-x/recommended') as any),
   mochaPlugin.configs.flat.recommended,
   {
     ignores: [
@@ -77,6 +79,7 @@ const config: Linter.FlatConfig[] = [
       ],
     },
   },
+  ...stylistic,
 ]
 
 export default config

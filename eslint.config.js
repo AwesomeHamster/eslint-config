@@ -1,7 +1,7 @@
-import configs from './dist/typescript.js'
+import { configs } from './dist/index.js'
 
 export default [
-  ...configs,
+  ...configs.typescript,
   {
     ignores: ['dist/**/*'],
   },

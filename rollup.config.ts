@@ -28,6 +28,7 @@ export default defineConfig({
     /^eslint-plugin-.*/,
     'globals',
     'typescript-eslint',
+    /^@stylistic\//,
   ],
   treeshake: true,
   plugins: [nodeResolve(), commonjs(), typescript()],
