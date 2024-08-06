@@ -35,13 +35,12 @@
   "dependencies": {
     "@eslint/eslintrc": "^3.1.0",
     "@eslint/js": "^9.8.0",
-    "eslint-config-standard": "^17.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import-x": "^3.1.0",
-    "eslint-plugin-n": "^17.9.0",
+    "eslint-plugin-n": "^17.10.2",
     "eslint-plugin-promise": "^7.0.0",
-    "globals": "^15.8.0",
-    "typescript-eslint": "^7.15.0"
+    "globals": "^15.9.0",
+    "typescript-eslint": "^8.0.1"
   },
   "devDependencies": {
     "@hamster-bot/prettier-config": "*",
@@ -49,15 +48,13 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint": "^9.6.0",
-    "@types/eslint__eslintrc": "^2.1.1",
+    "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^7.0.0",
-    "@typescript-eslint/parser": "^7.0.0",
-    "eslint": ">=9",
-    "eslint-plugin-mocha": "^10.4.3",
-    "rollup": "^4.18.0",
+    "eslint": "^9.8.0",
+    "eslint-plugin-mocha": "^10.5.0",
+    "rollup": "^4.20.0",
     "tslib": "^2.6.3",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "eslint": "^8.34.0 || >=9.0.0",
