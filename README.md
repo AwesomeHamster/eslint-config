@@ -1,4 +1,4 @@
-# eslint-config
+# @hamster-bot/eslint-config
 
 Common ESLint configuration used in Hamster
 
@@ -55,7 +55,7 @@ export default [
 ```
 
 > [!NOTE]
-> If you are using Yarn PnP, since the `import-x` plugin that we are using if not
+> If you are using Yarn PnP, since the `import-x` plugin that we are using is not
 > actually support PnP, it is supported by the `eslint`'s FlatCompat plugin right now.
 > So it require you to manually declare this plugin as the dependencies in your `package.json`.
 
