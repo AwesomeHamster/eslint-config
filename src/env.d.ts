@@ -4,8 +4,8 @@ declare module 'eslint-plugin-mocha' {
     rules: Linter.RulesRecord
     configs: {
       flat: {
-        recommended: Linter.FlatConfig
-        all: Linter.FlatConfig
+        recommended: Linter.Config
+        all: Linter.Config
       }
     }
   }

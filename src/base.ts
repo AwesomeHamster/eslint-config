@@ -1,7 +1,6 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import { Linter } from 'eslint'
-import mochaPlugin from 'eslint-plugin-mocha'
 
 import stylistic from './stylistic'
 
@@ -10,7 +9,6 @@ const compat = new FlatCompat()
 const config: Linter.Config[] = [
   js.configs.recommended,
   ...(compat.extends('plugin:import-x/recommended') as any),
-  mochaPlugin.configs.flat.recommended,
   {
     ignores: [
       '**/.git/**',

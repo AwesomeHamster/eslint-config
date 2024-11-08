@@ -25,6 +25,18 @@ export default [
 ]
 ```
 
+For example, for ESLint Mocha plugin:
+
+```js file=eslint.config.mjs
+import * as hamster from '@hamster-bot/eslint-config'
+import mochaPlugin from 'eslint-plugin-mocha'
+
+export default [
+  ...hamster.configs.base,
+  mochaPlugin.configs.flat.recommended,
+]
+```
+
 > You can also use `require()` and `module.export` if you are using CommonJS.
 > In that case, you should use `.cjs` extension or just `.js` for the configuration file.
 
