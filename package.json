@@ -11,7 +11,7 @@
     "url": "https://github.com/MaikoTan",
     "email": "maiko.tan.coding@gmail.com"
   },
-  "license": "CC-BY-SA-4.0",
+  "license": "CC-BY-NC-4.0",
   "type": "module",
   "files": [
     "dist"
