@@ -1008,8 +1008,8 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-import-x@npm:^4.3.1":
-  version: 4.3.1
-  resolution: "eslint-plugin-import-x@npm:4.3.1"
+  version: 4.4.3
+  resolution: "eslint-plugin-import-x@npm:4.4.3"
   dependencies:
     "@typescript-eslint/utils": "npm:^8.1.0"
     debug: "npm:^4.3.4"
@@ -1023,7 +1023,7 @@ __metadata:
     tslib: "npm:^2.6.3"
   peerDependencies:
     eslint: ^8.57.0 || ^9.0.0
-  checksum: 10/df2de2de29ea62c78568ca684261b0f44699f65f42fedb8f71ffa4195bb326362bd020104f556521f12acbbf4112f13057a3cdbfcd106853e696dddfd03664ed
+  checksum: 10/e0c459b3bab2af70a52caac5291e5f177e7a5445d29b0a062e47be767eeaef9c1e7901e4ae5f5381b3d7d17389db0e31184f868ec90f15c0d277d7f768b0a252
   languageName: node
   linkType: hard
 
