@@ -52,6 +52,6 @@ const config = [
       ]
     },
   },
-] as Linter.FlatConfig[]
+] as Linter.Config[]
 
 export default config
