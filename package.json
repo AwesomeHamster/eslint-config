@@ -44,7 +44,7 @@
   },
   "devDependencies": {
     "@hamster-bot/prettier-config": "^1.0.2",
-    "@rollup/plugin-commonjs": "^26.0.3",
+    "@rollup/plugin-commonjs": "^28.0.2",
     "@rollup/plugin-node-resolve": "^15.3.1",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/eslint": "^9.6.1",
