@@ -94,7 +94,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@hamster-bot/eslint-config@workspace:."
   dependencies:
-    "@eslint/eslintrc": "npm:^3.2.0"
     "@eslint/js": "npm:^9.17.0"
     "@hamster-bot/prettier-config": "npm:^1.0.2"
     "@rollup/plugin-commonjs": "npm:^26.0.3"

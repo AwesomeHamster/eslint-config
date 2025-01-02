@@ -66,11 +66,6 @@ export default [
 ]
 ```
 
-> [!NOTE]
-> If you are using Yarn PnP, since the `import-x` plugin that we are using is not
-> actually support PnP, it is supported by the `eslint`'s FlatCompat plugin right now.
-> So it require you to manually declare this plugin as the dependencies in your `package.json`.
-
 ## License
 
 ![Creative Commons License](https://i.creativecommons.org/l/by-nc/4.0/88x31.png)

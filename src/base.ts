@@ -1,14 +1,12 @@
-import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import { Linter } from 'eslint'
+import { flatConfigs as importx } from 'eslint-plugin-import-x'
 
 import stylistic from './stylistic'
 
-const compat = new FlatCompat()
-
-const config: Linter.Config[] = [
+const config = [
   js.configs.recommended,
-  ...(compat.extends('plugin:import-x/recommended') as any),
+  importx.recommended,
   {
     ignores: [
       '**/.git/**',

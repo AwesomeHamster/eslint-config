@@ -22,7 +22,6 @@ export default defineConfig({
     },
   ],
   external: [
-    '@eslint/eslintrc',
     '@eslint/js',
     'eslint',
     /^eslint-plugin-.*/,

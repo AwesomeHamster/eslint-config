@@ -4,7 +4,7 @@ import globals from 'globals'
 
 import baseConfig from './base'
 
-const config: Linter.Config[] = [
+const config = [
   ...baseConfig,
   nodePlugin.configs['flat/recommended'],
   {

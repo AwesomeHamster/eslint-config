@@ -1,10 +1,9 @@
-import { FlatCompat } from '@eslint/eslintrc'
 import { Linter } from 'eslint'
+import { flatConfigs as importx } from 'eslint-plugin-import-x'
 import { configs as tseslint } from 'typescript-eslint'
 
 import baseConfig from './base'
 
-const compat = new FlatCompat()
 const config = [
   ...baseConfig,
   ...tseslint.recommended,
@@ -15,14 +14,7 @@ const config = [
       },
     },
   },
-  ...compat.extends('plugin:import-x/typescript'),
-  {
-    settings: {
-      'import-x/resolver': {
-        typescript: true,
-      },
-    },
-  },
+  importx.typescript,
   {
     rules: {
       '@typescript-eslint/array-type': 'error',

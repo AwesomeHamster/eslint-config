@@ -21,12 +21,16 @@ const config: Linter.BaseConfig[] = [
       '@stylistic/keyword-spacing': 'error',
       '@stylistic/member-delimiter-style': 'error',
       'max-len': 'off',
-      '@stylistic/max-len': ['error', {
-        code: 120,
-        ignoreTrailingComments: true,
-        ignoreUrls: true, ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals: true,
-      }],
+      '@stylistic/max-len': [
+        'error',
+        {
+          code: 120,
+          ignoreTrailingComments: true,
+          ignoreUrls: true,
+          ignoreTemplateLiterals: true,
+          ignoreRegExpLiterals: true,
+        },
+      ],
       '@stylistic/multiline-comment-style': 'warn',
     },
   },

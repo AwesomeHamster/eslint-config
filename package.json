@@ -33,7 +33,6 @@
   },
   "prettier": "@hamster-bot/prettier-config",
   "dependencies": {
-    "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.17.0",
     "@stylistic/eslint-plugin": "^2.12.1",
     "eslint-import-resolver-typescript": "^3.7.0",
