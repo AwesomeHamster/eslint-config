@@ -41,6 +41,15 @@ const config = [
       'no-inner-declarations': 'off',
       'no-useless-constructor': 'off',
       '@typescript-eslint/no-useless-constructor': 'warn',
+      '@typescript-eslint/no-unused-expressions': [
+        'error',
+        {
+          allowShortCircuit: true,
+          allowTernary: true,
+          allowTaggedTemplates: true,
+          enforceForJSX: true,
+        },
+      ]
     },
   },
 ] as Linter.FlatConfig[]
