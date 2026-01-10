@@ -22,8 +22,8 @@ export default defineConfig({
     },
   ],
   external: [
-    '@eslint/js',
-    'eslint',
+    /^@eslint\/.*/,
+    /^eslint(\/.*)?/,
     /^eslint-plugin-.*/,
     'globals',
     'typescript-eslint',

@@ -1,9 +1,20 @@
-import base from './base'
-import node from './node'
-import typescript from './typescript'
+import { defineConfig } from 'eslint/config'
 
-export const configs = {
+import base from './rules/base.js'
+import node from './rules/node.js'
+import typescript from './rules/typescript.js'
+
+const configs: {
+  base: typeof base
+  node: typeof node
+  typescript: typeof typescript
+} = {
   base,
   node,
   typescript,
+}
+
+export {
+  configs,
+  defineConfig,
 }

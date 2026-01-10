@@ -1,7 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin'
-import { Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
 
-const config: Linter.BaseConfig[] = [
+const config = defineConfig(
   stylistic.configs.customize({
     arrowParens: true,
     blockSpacing: true,
@@ -34,6 +34,6 @@ const config: Linter.BaseConfig[] = [
       '@stylistic/multiline-comment-style': 'warn',
     },
   },
-]
+)
 
 export default config

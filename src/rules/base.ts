@@ -1,13 +1,15 @@
 import js from '@eslint/js'
-import { Linter } from 'eslint'
-import { flatConfigs as importx } from 'eslint-plugin-import-x'
+import { defineConfig } from 'eslint/config'
+import { importX } from 'eslint-plugin-import-x'
 
-import stylistic from './stylistic'
+import stylistic from './stylistic.js'
 
-const config = [
+const config = defineConfig(
   js.configs.recommended,
-  importx.recommended,
+  // @ts-expect-error for poor typing
+  importX.flatConfigs.recommended,
   {
+    name: '@maiko/base/ignores',
     ignores: [
       '**/.git/**',
       '**/.yarn/**',
@@ -16,8 +18,9 @@ const config = [
     ],
   },
   {
+    name: '@maiko/base/rules',
     languageOptions: {
-      ecmaVersion: 2024,
+      ecmaVersion: 'latest',
     },
     settings: {
       'import-x/resolver': {
@@ -25,7 +28,6 @@ const config = [
       },
     },
     rules: {
-      'comma-dangle': ['error', 'always-multiline'],
       'dot-notation': 'off',
       'generator-star-spacing': ['error', 'after'],
       'max-len': ['warn', 120],
@@ -75,7 +77,7 @@ const config = [
       ],
     },
   },
-  ...stylistic,
-]
+  stylistic,
+)
 
 export default config
