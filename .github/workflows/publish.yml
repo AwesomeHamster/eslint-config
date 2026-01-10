@@ -6,6 +6,7 @@ on:
       - master
 
 permissions:
+  id-token: write
   contents: write
 
 jobs:
@@ -13,33 +14,53 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
-
-      - name: Enable Corepack
-        run: |
-          corepack enable
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22.x'
+          cache: 'yarn'
 
       - name: Install Dependencies
         run: |
           yarn install
 
-      - name: Build
+      - name: Build Package
         run: |
           yarn build
 
+        # Upgrade NPM to the latest version so we could use trusted publishers feature
+      - name: Upgrade NPM
+        run: npm install -g npm@latest
+
       - name: Publish to NPM
-        id: npm-publish
-        uses: JS-DevTools/npm-publish@v3
+        id: publish
+        uses: JS-DevTools/npm-publish@v4
         with:
-          token: ${{ secrets.NPM_TOKEN }}
           access: public
 
-      - name: Create GitHub Release
+      - name: Create Git Tag
+        if: ${{ steps.publish.outputs.type }}
+        run: |
+          echo "Creating Git Tag..."
+          PACKAGE_VERSION=$(jq -r '.version' package.json)
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git tag $PACKAGE_VERSION
+          git push origin $PACKAGE_VERSION
+          echo "PACKAGE_VERSION=$PACKAGE_VERSION" >> $GITHUB_ENV
+
+      - name: Pack Package
+        if: ${{ steps.publish.outputs.type }}
+        run: |
+          yarn pack --out '%s-%v.tgz'
+
+      - name: Publish to Release
+        if: ${{ steps.publish.outputs.type }}
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v${{ steps.npm-publish.outputs.version }}
-          generate_release_notes: true
-          make_latest: true
+          files: '*.tgz'
+          tag_name: ${{ env.PACKAGE_VERSION }}
