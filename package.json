@@ -4,7 +4,7 @@
   "description": "Common ESLint configuration used in Hamster",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MaikoTan/eslint-config.git"
+    "url": "git+https://github.com/AwesomeHamster/eslint-config.git"
   },
   "author": {
     "name": "Maiko Tan",
